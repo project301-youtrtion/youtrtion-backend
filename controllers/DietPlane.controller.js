@@ -2,6 +2,7 @@
 const { request, response } = require('express');
 const dietModel = require('../models/DietPlan.model');
 
+
 const getDiteInfo = (request, response) => {
     try {
         dietModel.find({ email: request.query.email }, (error, DietData) => {
