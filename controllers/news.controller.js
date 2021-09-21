@@ -4,12 +4,15 @@ const app_key=process.env.app_key;
 
 
 const getNews=async(request,respond)=>{
-    const item=request.query.q;
+    const item=request.query.qintitle;
     console.log(item)
 
     const UrlForItem="https://newsdata.io/api/1/news"
   
-    const getItem=await axios.get(`${UrlForItem}?apikey=${app_key}&q=${item}`)
+    const getItem=await axios.get(`${UrlForItem}?apikey=${app_key}&qintitle=${item}&language=en`)
+
+
+    
 
     respond.json(getItem.data)
     console.log(getItem.data)
