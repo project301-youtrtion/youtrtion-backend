@@ -1,7 +1,7 @@
 'use strict';
 
-const app_id = process.env.nutrition_API_app_id;
-const app_key = process.env.nutrition_API_app_key;
+const app_id = process.env.NUTRITION_API_APP_ID;
+const app_key = process.env.NUTRITION_API_APP_KEY;
 const axios = require('axios')
 
 
